@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 public class BubbleSort {
     public static void main(String[] args) {
-        int[] arr = new int[100000];
-        populateArray(100, arr);
+        int[] arr = new int[20];
+        PopulateArray.populateArray(100, arr);
         // System.out.println("Unsorted : ");
         // System.out.println(Arrays.toString(arr));
-        sort(arr);
+        recursionSort(arr);
         System.out.println("Sorted : ");
         System.out.println(Arrays.toString(arr));
     }
@@ -30,9 +30,21 @@ public class BubbleSort {
         }
     }
 
-    private static void populateArray(int range, int[] arr ) {
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int) Math.floor(Math.random() * range + 1);
+    public static void recursionSort(int[] arr) {
+        recursionSort(arr, arr.length);
+    }
+
+    public static void recursionSort(int[] arr, int n) {
+        if (n == 1)
+            return;
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                int temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+            }
         }
+        recursionSort(arr, n - 1);
     }
 }
