@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 public class BubbleSort {
     public static void main(String[] args) {
-        int[] arr = new int[20];
+        int[] arr = new int[100000];
         PopulateArray.populateArray(100, arr);
         // System.out.println("Unsorted : ");
         // System.out.println(Arrays.toString(arr));
-        recursionSort(arr);
+        // recursionSort(arr);
         sort(arr);
         System.out.println("Sorted : ");
         System.out.println(Arrays.toString(arr));
@@ -31,6 +31,7 @@ public class BubbleSort {
         }
     }
 
+    // recursion sort have a limit in the size of arrays, because recursion use a lot of memory, so it will return the error if the size of arrays is bigger then what should it be
     public static void recursionSort(int[] arr) {
         recursionSort(arr, arr.length);
     }
