@@ -9,6 +9,7 @@ public class BubbleSort {
         // System.out.println("Unsorted : ");
         // System.out.println(Arrays.toString(arr));
         recursionSort(arr);
+        sort(arr);
         System.out.println("Sorted : ");
         System.out.println(Arrays.toString(arr));
     }
