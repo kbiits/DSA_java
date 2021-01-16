@@ -47,7 +47,8 @@ public class Stack {
         st.push(1);
         st.push(2);
         st.push(3);
-        System.out.println(st.pop());
+        st.push(4);
+        st.pop();
         st.print();
         System.out.println(st.peek());
     }
@@ -57,13 +58,12 @@ public class Stack {
     }
 
     int peek() {
-        return this.top.getValue();
+        return this.isEmpty() ? -9999999 : this.top.getValue();
     }
 
     void print() {
-        Node temp = this.down;
-
         if (!isEmpty()) {
+            Node temp = this.down;
             System.out.print("[ ");
             while (temp != null) {
                 System.out.printf("%d , ", temp.getValue());
