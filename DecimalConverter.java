@@ -5,7 +5,9 @@ public class DecimalConverter {
         int base = 2;
         int number = 5;
         String result = convert(number, base);
-        System.out.println(result);
+        System.out.println("With returning value : " + result);
+        System.out.print("Without returning value : ");
+        convert2(number, base);
     }
 
     // helper (driver) method for returning value
