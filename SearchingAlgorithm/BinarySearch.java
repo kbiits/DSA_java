@@ -31,13 +31,15 @@ public class BinarySearch {
     }
 
     public static int searchWithRecursion(int[] array, int find, int low, int high) {
-        int mid = (low + high) / 2;
-        if (array[mid] == find) {
-            return mid;
-        } else if (array[mid] < find) {
-            return searchWithRecursion(array, find, mid + 1, high);
-        } else {
-            return searchWithRecursion(array, find, low, mid - 1);
-        }
+        if (high >= low) {
+            int mid = (low + high) / 2;
+            if (array[mid] == find) {
+                return mid;
+            } else if (array[mid] < find)
+                return searchWithRecursion(array, find, mid + 1, high);
+            else
+                return searchWithRecursion(array, find, low, mid - 1);
+        } else
+            return -1;
     }
 }
