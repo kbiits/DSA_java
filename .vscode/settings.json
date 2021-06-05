@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "DataStructure",
+        "",
+        "randomStuff",
+        "SortingAlgorithm",
+        "SearchingAlgorithm"
+    ],
+}
