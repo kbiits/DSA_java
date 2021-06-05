@@ -1,5 +1,3 @@
-package SortingAlgorithm;
-
 import java.util.Arrays;
 
 public class InsertionSort {
@@ -35,6 +33,8 @@ public class InsertionSort {
                     int temp = arr[j - 1];
                     arr[j - 1] = arr[j];
                     arr[j] = temp;
+                } else {
+                    break;
                 }
             }
         }

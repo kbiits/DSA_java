@@ -1,5 +1,3 @@
-package SearchingAlgorithm;
-
 /**
  * BinarySearch
  */

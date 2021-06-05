@@ -1,5 +1,3 @@
-package SortingAlgorithm;
-
 import java.util.Arrays;
 
 public class MergeSort {

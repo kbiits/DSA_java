@@ -1,5 +1,3 @@
-package DataStructure;
-
 public class SinglyLinkedList {
     private Node head;
     private Node tail;

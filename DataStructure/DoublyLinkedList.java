@@ -1,5 +1,3 @@
-package DataStructure;
-
 public class DoublyLinkedList {
     int size;
     NodeDouble head;

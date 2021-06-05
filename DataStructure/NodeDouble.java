@@ -1,4 +1,3 @@
-package DataStructure;
 
 public class NodeDouble {
     private int value;
