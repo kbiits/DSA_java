@@ -6,13 +6,8 @@ public class BinarySearchTree {
     TreeNode root;
 
     public static void main(String[] args) {
-        BinarySearchTree bst = new BinarySearchTree(9);
+        BinarySearchTree bst = new BinarySearchTree();
         bst.add(12);
-        bst.add(4);
-        bst.add(5);
-        bst.add(5);
-        bst.add(6);
-        bst.remove(9);
         bst.inOrderPrint();
     }
 
@@ -26,6 +21,10 @@ public class BinarySearchTree {
 
     public void add(int val) {
         TreeNode temp = this.root;
+        if(temp == null) {
+            this.root = new TreeNode(val);
+            return;
+        }
         addRecursive(temp, val);
     }
 
