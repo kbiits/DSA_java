@@ -8,6 +8,11 @@ public class BinarySearchTree {
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
         bst.add(12);
+        bst.add(8);
+        bst.add(10);
+        bst.add(-1);
+
+        bst.remove(12);
         bst.inOrderPrint();
     }
 
@@ -56,7 +61,7 @@ public class BinarySearchTree {
         if (root == null)
             return;
         inOrderPrintDriver(root.left);
-        System.out.print(root.value);
+        System.out.print(root.value + ", ");
         inOrderPrintDriver(root.right);
     }
 
@@ -67,11 +72,23 @@ public class BinarySearchTree {
 
     public TreeNode removeDriver(TreeNode temp, int val) {
         // ----------------------- Base Case ---------------------
+
+        // Check if temp = null;
+        if(temp == null) {
+            return new TreeNode(-999999);
+        }
+
         // Check if val = root.value
         if (temp == this.root && this.root.value == val) {
-            var tempLeftRoot = this.root.left;
-            this.root = this.root.right;
-            this.root.left = tempLeftRoot;
+            if(this.root.right != null) {
+                var tempLeftRoot = this.root.left;
+                this.root = this.root.right;
+                this.root.left = tempLeftRoot;
+            } else if(this.root.left != null) {
+                this.root = this.root.left;
+            }  else {
+                return new TreeNode(-999999);
+            }
             return temp;
         }
 
