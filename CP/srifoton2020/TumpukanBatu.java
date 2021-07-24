@@ -1,3 +1,5 @@
+package CP.srifoton2020;
+
 import java.util.Scanner;
 
 public class TumpukanBatu {
